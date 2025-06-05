@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './Profiles.jsx';
 
 function MyButton() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <h1>Hi Guys </h1>
       <p>CLICK the <b>BUTTON</b></p>
       <MyButton/>
+      <Profile/>
     </div>
   );
 }
