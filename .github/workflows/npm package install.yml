@@ -20,7 +20,7 @@ jobs:
         node-version: 20.x
     
     - name: setup
-      run: npm ${{ inputs.Npm-package }} 
+      run: npm install ${{ inputs.Npm-package }} 
     - name: Transfer Contents to Root (excluding node_modules)
       run: |
           cd wbrtc
