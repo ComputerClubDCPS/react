@@ -21,13 +21,7 @@ jobs:
     
     - name: setup
       run: npm install ${{ inputs.Npm-package }} 
-    - name: Transfer Contents to Root (excluding node_modules)
-      run: |
-          cd wbrtc
-          shopt -s dotglob
-          find . ! -path "./node_modules" -maxdepth 1 -exec mv {} .. \;
-          cd ..
-          rm -rf wbrtc
+
 
     - name: Commit changes
       run: |
