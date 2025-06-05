@@ -25,7 +25,7 @@ function App() {
         </a>
       </header>
     </div>
-  <footer> <MyButton /> </footer
+  <footer> <MyButton /> </footer>
   );
 }
 
