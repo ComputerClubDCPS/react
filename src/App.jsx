@@ -9,11 +9,11 @@ function MyButton() {
 
 function App() {
   return (
-    <>
+    <div className="app">
       <h1>Hi Guys </h1>
       <p>CLICK the <b>BUTTON</b></p>
       <MyButton/>
-    </>
+    </div>
   );
 }
 
