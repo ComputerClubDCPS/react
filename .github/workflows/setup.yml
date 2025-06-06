@@ -21,7 +21,7 @@ jobs:
           node-version: '20.x'
 
       - name: Create app
-        run: npx ${{ inputs.Create-Command }} --no-git wbrtc
+        run: npx ${{ inputs.Create-Command }} wbrtc --no-git
 
       - name: Transfer Contents to Root (excluding node_modules)
         run: |
