@@ -1,21 +1,12 @@
-name: Create Next.js App and Transfer Contents (Manual)
+name: Create app and transfer contents
 
 on:
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'
+      Create-Command:
+        type: string
         required: true
-        default: 'info'
-        type: choice
-        options:
-          - info
-          - warning
-          - debug
-      environment:
-        description: 'Environment to deploy to'
-        type: environment
-        required: false
+        default: create-react-app@latest
 
 jobs:
   build:
@@ -29,8 +20,8 @@ jobs:
         with:
           node-version: '20.x'
 
-      - name: Create Next.js app
-        run: npx create-react-app@latest wbrtc
+      - name: Create app
+        run: npx ${{ inputs.Create-Command }} wbrtc
 
       - name: Transfer Contents to Root (excluding node_modules)
         run: |
