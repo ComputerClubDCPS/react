@@ -62,13 +62,15 @@ export function ErrorBoundary({ error }) {
 
   return (
     <main className="pt-16 p-4 container mx-auto">
-      <h1>{message}</h1>
-      <p>{details}</p>
-      {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
-          <code>{stack}</code>
-        </pre>
-      )}
-    </main>
+      <div className="max-w-[300px] w-full space-y-6 px-4">
+        <h1 className="leading-6 text-gray-700 dark:text-gray-200 text-center">{message}</h1>
+        <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">{details}</p>
+        {stack && (
+          <pre className="w-full p-4 overflow-x-auto">
+            <code>{stack}</code>
+          </pre>
+        )}
+      </div>  
+     </main>
   );
 }
