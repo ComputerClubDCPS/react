@@ -62,7 +62,7 @@ export function ErrorBoundary({ error }) {
 
   return (
     <main className="pt-16 p-4 container mx-auto">
-      <div className="max-w-[300px] w-full space-y-6 px-4">
+      <div className="max-w-[300px] w-full space-y-6 px-4 text-center">
         <h1 className="leading-6 text-gray-700 dark:text-gray-200 text-center">{message}</h1>
         <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">{details}</p>
         {stack && (
